@@ -1,13 +1,79 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.app {
+  background-image: url("./assets/sunny.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.app.cloudy {
+  background-image: url("./assets/cloudy.jpg");
+}
+
+.app.rainy {
+  background-image: url("./assets/rainy.jpg");
+}
+
+.app.snowy {
+  background-image: url("./assets/snowy.jpg");
+}
+
+main {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.button-layout {
+  flex-direction: row;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.start {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.stop {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.reset {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.button-size {
+  font-size: 30px;
+  font-weight: 700;
+  padding: 15px;
+}
+
+.timer-box {
+  padding-top: 125px;
+  padding-bottom: 75px;
+}
+
+.timer-style {
+  font-size: 150px;
+  font-weight: 500;
+  text-align: center;
+  margin: auto;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
 }
