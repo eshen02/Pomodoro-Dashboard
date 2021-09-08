@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/pomodoro-dashboard/static/css/main.ada09891.chunk.css",
+    "main.js": "/pomodoro-dashboard/static/js/main.38d29345.chunk.js",
+    "main.js.map": "/pomodoro-dashboard/static/js/main.38d29345.chunk.js.map",
+    "runtime-main.js": "/pomodoro-dashboard/static/js/runtime-main.2c7aae2c.js",
+    "runtime-main.js.map": "/pomodoro-dashboard/static/js/runtime-main.2c7aae2c.js.map",
+    "static/js/2.48cadba4.chunk.js": "/pomodoro-dashboard/static/js/2.48cadba4.chunk.js",
+    "static/js/2.48cadba4.chunk.js.map": "/pomodoro-dashboard/static/js/2.48cadba4.chunk.js.map",
+    "static/js/3.b08f7316.chunk.js": "/pomodoro-dashboard/static/js/3.b08f7316.chunk.js",
+    "static/js/3.b08f7316.chunk.js.map": "/pomodoro-dashboard/static/js/3.b08f7316.chunk.js.map",
+    "index.html": "/pomodoro-dashboard/index.html",
+    "static/css/main.ada09891.chunk.css.map": "/pomodoro-dashboard/static/css/main.ada09891.chunk.css.map",
+    "static/js/2.48cadba4.chunk.js.LICENSE.txt": "/pomodoro-dashboard/static/js/2.48cadba4.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/pomodoro-dashboard/static/media/sunny.606546bd.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2c7aae2c.js",
+    "static/js/2.48cadba4.chunk.js",
+    "static/css/main.ada09891.chunk.css",
+    "static/js/main.38d29345.chunk.js"
+  ]
+}
