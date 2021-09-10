@@ -120,9 +120,11 @@ function App() {
       return "app sunny"
     } else if(weather === "Snow") {
       return "app snowy"
-    } else {
+    } else if(weather === "Clouds") {
       return "app cloudy"
     }
+
+    return "app"
   }
 
   return (
