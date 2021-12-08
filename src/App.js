@@ -18,7 +18,7 @@ function App() {
 
   const [weather, setWeather] = useState('');
 
-  var timeRemaining = useRef(work);
+  var totalTime = useRef(work);
   var cycleCount = useRef(0);
 
   useEffect(function() {
@@ -40,15 +40,18 @@ function App() {
 
   useEffect(() => {
     let interval = null;
+    const start = new Date().getTime();
 
     if(timerOn) {
       interval = setInterval(() => {
-        timeRemaining.current--;
+        var cur = new Date().getTime();
         
-        var sec = Math.floor(timeRemaining.current%60);
-        var min = Math.floor(timeRemaining.current/60);
+        var timeRemaining = totalTime.current - Math.floor((cur - start)/1000);
+        
+        var sec = Math.floor((timeRemaining%60));
+        var min = Math.floor(timeRemaining/60);
   
-        if(timeRemaining.current < 0){
+        if(timeRemaining <= 0){
           setTimerState(false);
           document.getElementById("alarm").play();
           
@@ -58,19 +61,19 @@ function App() {
 
             if(cycleCount.current%4 === 0){
               setTimerType("Long Rest");
-              timeRemaining.current = longRest;
+              totalTime.current = longRest;
             } else {
               setTimerType("Short Rest");
-              timeRemaining.current = shortRest;
+              totalTime.current = shortRest;
             } 
 
           } else {
             setTimerType("Work");
-            timeRemaining.current = work;
+            totalTime.current = work;
           }
 
-          sec = Math.floor(timeRemaining.current%60);
-          min = Math.floor(timeRemaining.current/60);
+          sec = Math.floor(timeRemaining%60);
+          min = Math.floor(timeRemaining/60);
         }
 
         setSeconds(sec); 
@@ -90,7 +93,7 @@ function App() {
     setMinutes(25);
     setTimerType("Work");
     cycleCount.current = 0;
-    timeRemaining.current = work;
+    totalTime.current = work;
   }
 
   function displayTimer() {
