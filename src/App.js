@@ -28,10 +28,7 @@ function App() {
         .then(res => res.json())
         .then((result) => {
           setWeather(result.weather[0].main);
-          console.log(result.weather[0].main);
         })
-        console.log(position.coords.latitude);
-        console.log(position.coords.longitude);
       })
     } else {
       console.log("Allow access to location!")
@@ -51,7 +48,7 @@ function App() {
         var sec = Math.floor((timeRemaining%60));
         var min = Math.floor(timeRemaining/60);
   
-        if(timeRemaining <= 0){
+        if(timeRemaining < 0){
           setTimerState(false);
           document.getElementById("alarm").play();
           
@@ -72,17 +69,15 @@ function App() {
             totalTime.current = work;
           }
 
-          sec = Math.floor(timeRemaining%60);
-          min = Math.floor(timeRemaining/60);
+          sec = Math.floor(totalTime.current%60);
+          min = Math.floor(totalTime.current/60);
         }
 
         setSeconds(sec); 
         setMinutes(min);
         
       },1000);
-    } else {
-      clearInterval(interval);
-    }
+    } 
 
     return () => clearInterval(interval);
   }, [timerOn, timerType]);
